@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+                let correct = document.querySelector('#b');
+                let incorrect = document.querySelectorAll('.incorrect');
+                let message = document.querySelector('#message')
+
+                correct.addEventListener('click', function(){
+                    correct.style.backgroundColor = 'green';
+                    message.innerHTML = 'Correct!';
+                })
+
+                for(let i = 0; i < incorrect.length; i++){
+                    incorrect[i].addEventListener('click', function(){
+                    incorrect[i].style.backgroundColor = 'red';
+                    message.innerHTML= 'Incorrect!';
+                    })
+                }
+
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    let free_message = document.querySelector('#free_message');
+                    if (input.value == 'basketball'){
+                        input.style.color = 'green';
+                        free_message.innerHTML = 'Correct!';
+                    }
+                    else{
+                        input.style.color = 'red';
+                        free_message.innerHTML = 'Incorrect!';
+                    }
+                })
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the capital city of China?</h3>
+                <button class = 'incorrect'>Chengdu</button>
+                <button class = 'incorrect'>Hangzhou</button>
+                <button class = 'incorrect'>Chongqin</button>
+                <button class = 'incorrect'>Xian</button>
+                <button id="b">Beijing</button>
+                <p id = 'message'></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>which sports do Michael Jordan play?</h3>
+                <input type = 'text'>
+                <button id = 'check'>check answer</button>
+                <p id = 'free_message'></p>
+            </div>
+        </div>
+    </body>
+</html>

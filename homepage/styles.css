@@ -1,0 +1,32 @@
+#name{
+    font-family:monospace;
+    font-size:70px;
+    text-emphasis:underlie;
+    color:olive;
+    opacity:0.5;
+}
+
+.hobby{
+    font-family:helvetica;
+    font-size:30px;
+}
+
+li:hover {
+    color: blue;
+}
+
+.tong{
+    font-family: OCR A Std, monospace;
+    font-style: italic;
+    font-size:50px;
+    color:blue;
+    opacity:0.5;
+}
+
+#k{
+    font-family:monospace;
+    font-size:70px;
+    text-emphasis:underlie;
+    color:red;
+    opacity:0.5;
+}

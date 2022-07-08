@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: time to run sort1 on sorted.txt is much shorter than on random.txt or reversed.txt
+
+sort2 uses: merge sort
+
+How do you know?: time to run it on any txt is significantly shorter than other two sort algorithms
+
+sort3 uses: selection sort
+
+How do you know?: it is slower than sort2 and time to run it on reversed.txt is the same as on sorted.txt
